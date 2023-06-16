@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: darkblue;
+  color: #ffff;
+}
+
+.menu {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.menu:hover {
+  background: #ffff;
+  color: #000;
+}
+
+.menu :where(i) {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sideBar {
+  width: 400px;
+  height: calc(100vh - 100px);
+  background: rgb(1, 1, 95);
+  transform: translateX(-150%);
+  position: absolute;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sideBar.active {
+  transform: translateX(0);
+}
+
+.actions {
+  margin: 200px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.action {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.action:hover {
+  background-color: #b46666;
+}
+
+.action a {
+  font-size: 1.5rem;
+}
+
+.bottom {
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.option {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.option i,
+a {
+  font-size: 1.4rem;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* relogio */
+
+.hora,
+.minutos,
+.segundos {
+  position: absolute;
+}
+
+.hora,
+.hr {
+  width: 200px;
+  height: 200px;
+}
+
+.minutos,
+.min {
+  width: 230px;
+  height: 230px;
+}
+
+.segundos,
+.seg {
+  width: 250px;
+  height: 250px;
+}
+
+.hr,
+.min,
+.seg {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.hr::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 100px;
+  background: #000;
+}
+
+.min::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 110px;
+  background: #000;
+}
+
+.seg::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 120px;
+  background: #2196f3;
+}
+
+#relogio-ditital {
+  background: #cfcfcf;
+  height: 80px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.campoRelogio {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.relacao{
+    margin-top: 100px;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.turmas{
+    width: 90%;
+}
+
+
+thead {
+    background-color: red;
+    color: #fff;
+}
+
+thead th{
+    width: auto;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+tbody td{
+    width: 50px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even){
+    background-color: rgb(63,63,63);
+    color: #fff;
+}
+
+tbody tr:nth-child(even).liberada{
+  background-color: green;
+}
+
+tbody td button{
+    width: 130px;
+    padding: 10px;
+    margin: 10px 0;
+    background: darkred;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.liberada{
+    background-color: green;
+    text-decoration: dashed;
+    color: #fff;
+}
+
+.liberada button{
+    background: gray;
+}
+
+/* formulario de cadastro de turmas */
+
+.cadastrarTurma{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+  max-width: 100%;
+  background-color: gray;
+  width: 800px;
+  border-radius: 10px;
+}
+
+.title{
+  font-size: 2rem;
+  letter-spacing: 2px;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+
+.cadastrarTurma :where(form){
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  color: #cfcfcf;
+  gap: 2rem;
+}
+
+.inputArea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+}
+
+.inputArea :where(label){
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 0 5px 0;
+}
+
+.inputArea :where(input){
+  font-size: 1rem;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  outline: none;
+  padding: 0 15px;
+  transition: .5s ease;
+}
+
+.inputArea :where(input):focus{
+  border: 3px solid dodgerblue;
+}
+
+.buttonArea{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.buttonArea button{
+  background-color: dodgerblue;
+  border: none;
+  outline: none;
+  width: 200px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  transition: .3s ease;
+}
+
+.buttonArea button:nth-child(1):hover{
+    background-color: rgb(21, 102, 182);
+}
+
+.buttonArea button:nth-child(2){
+  background-color: #ffff;
+  color: dodgerblue;
+  border: 3px solid dodgerblue;
+}
+
+.buttonArea button:nth-child(2):hover{
+  background-color: dodgerblue;
+  color: #fff;
+}

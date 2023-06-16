@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.msg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    opacity: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxContainer{
+    max-width: 100%;
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.title{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: darkblue;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: #ffff;
+}
+
+.form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.datesInputs{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.campInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 70%;
+}
+
+.campInput i {
+    width: 70px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.campInput input{
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: 500px;
+    border: none;
+    border-radius: 5px;
+}
+
+.campInput input:focus{
+    outline: none;
+    border: none;
+}
+
+.showPass{
+    width: 70%;
+    display: flex;
+    padding: 0 10px;
+    gap: 10px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.showPass #checkbox{
+    width: 15px;
+    accent-color: blue;
+}
+
+.buttonCamp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.buttonCamp button{
+    width: 250px;
+    padding: 7px;
+    outline: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    cursor: pointer;
+    background: blue;
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* responsividade */
+
+@media(max-width: 430px){
+    .boxContainer{
+        width: 325px;
+        height: auto;
+    }
+
+    .showPass{
+        margin-top: 20px;
+    }
+}
